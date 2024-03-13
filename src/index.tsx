@@ -2,32 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./global.css";
 import App from "./App";
-import {
-  ApolloClient,
-  ApolloProvider,
-  InMemoryCache,
-  gql,
-} from "@apollo/client";
-
-const client = new ApolloClient({
-  uri: "https://flyby-router-demo.herokuapp.com/",
-  cache: new InMemoryCache(),
-});
-
-client
-  .query({
-    query: gql`
-      query GetLocations {
-        locations {
-          id
-          name
-          description
-          photo
-        }
-      }
-    `,
-  })
-  .then((result) => console.log(result));
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./services/apolloClient";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
