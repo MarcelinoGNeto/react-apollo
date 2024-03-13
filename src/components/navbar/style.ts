@@ -5,19 +5,27 @@ interface MobileMenuProps {
 }
 
 export const Nav = styled.nav`
+  display: flex;
   background-color: #333;
   padding: 10px;
+  
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
 `;
 
-export const NavLink = styled.a`
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-  height: 30px;
-  cursor: pointer;
+export const NavLink = styled.div`
 
-  &:hover {
-    text-decoration: underline;
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -35,6 +43,7 @@ export const MobileMenu = styled.div<MobileMenuProps>`
   display: none;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 
   @media (max-width: 768px) {
     display: ${(props) => (props.open ? "flex" : "none")};

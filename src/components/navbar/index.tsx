@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Nav, NavLink, MenuIcon, MobileMenu } from "./style";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,15 +23,27 @@ const Navbar: React.FC = () => {
       <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
       {isMobile === true ? (
         <MobileMenu open={isOpen}>
-          <NavLink href="#">Home</NavLink>
-          <NavLink href="#">Locations</NavLink>
-          <NavLink href="#">About</NavLink>
+          <NavLink>
+            <Link to="/">Home</Link>
+          </NavLink>
+          <NavLink>
+            <Link to="/locations">Locations</Link>
+          </NavLink>
+          <NavLink>
+            <Link to="/about">About</Link>
+          </NavLink>
         </MobileMenu>
       ) : (
         <>
-          <NavLink href="#">Home</NavLink>
-          <NavLink href="#">Locations</NavLink>
-          <NavLink href="#">About</NavLink>
+          <NavLink>
+            <Link to="/">Home</Link>
+          </NavLink>
+          <NavLink>
+            <Link to="/locations">Locations</Link>
+          </NavLink>
+          <NavLink>
+            <Link to="/about">About</Link>
+          </NavLink>
         </>
       )}
     </Nav>
