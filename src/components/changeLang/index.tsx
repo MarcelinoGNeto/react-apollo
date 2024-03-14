@@ -12,17 +12,13 @@ export const ChangeLanguage = () => {
     <S.Container>
       <GiGlobe color="#fff" size={30} />
       <S.Ul>
-        <S.LiDropdown>
-          <div onClick={() => changeLang("en")}>
-            EN
-          </div>
-            <LiaFlagUsaSolid />
+        <S.LiDropdown onClick={() => changeLang("en")}>
+          <span>EN</span>
+          <LiaFlagUsaSolid />
         </S.LiDropdown>
-        <S.LiDropdown>
-          <div onClick={() => changeLang("pt")}>
-            PT
-          </div>
-            <GiBrazilFlag />
+        <S.LiDropdown onClick={() => changeLang("pt")}>
+          <span>PT</span>
+          <GiBrazilFlag />
         </S.LiDropdown>
       </S.Ul>
     </S.Container>

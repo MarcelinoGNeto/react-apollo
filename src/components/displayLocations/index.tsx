@@ -20,7 +20,7 @@ export const DisplayLocations = () => {
       <S.H3>{name}</S.H3>
       <S.ImgContainer>
 
-      <img width="320" height="180" alt="location-reference" src={`${photo}`} />
+      <img width="320" height="180" alt="imagem de uma localização" src={`${photo}`} />
       </S.ImgContainer>
       <b>About this location:</b>
       <S.TextContainer>
