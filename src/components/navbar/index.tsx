@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Nav, NavLink, MenuIcon, MobileMenu } from "./style";
+import * as S from "./style";
 import { Link } from "react-router-dom";
+import { ChangeLanguage } from "../changeLang";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,34 +20,37 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <Nav>
-      <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
+    <S.Nav>
+      <S.MenuIcon onClick={toggleMenu}>☰</S.MenuIcon>
       {isMobile === true ? (
-        <MobileMenu open={isOpen}>
-          <NavLink>
+        <S.MobileMenu open={isOpen}>
+          <S.NavLink>
             <Link to="/">Home</Link>
-          </NavLink>
-          <NavLink>
+          </S.NavLink>
+          <S.NavLink>
             <Link to="/locations">Locations</Link>
-          </NavLink>
-          <NavLink>
+          </S.NavLink>
+          <S.NavLink>
             <Link to="/about">About</Link>
-          </NavLink>
-        </MobileMenu>
+          </S.NavLink>
+        </S.MobileMenu>
       ) : (
-        <>
-          <NavLink>
+        <S.DesktopMenu>
+          <S.NavLink>
             <Link to="/">Home</Link>
-          </NavLink>
-          <NavLink>
+          </S.NavLink>
+          <S.NavLink>
             <Link to="/locations">Locations</Link>
-          </NavLink>
-          <NavLink>
+          </S.NavLink>
+          <S.NavLink>
             <Link to="/about">About</Link>
-          </NavLink>
-        </>
+          </S.NavLink>
+          <S.NavLink>
+            <ChangeLanguage />
+          </S.NavLink>
+        </S.DesktopMenu>
       )}
-    </Nav>
+    </S.Nav>
   );
 };
 

@@ -7,7 +7,7 @@ interface MobileMenuProps {
 export const Nav = styled.nav`
   display: flex;
   background-color: #333;
-  padding: 10px;
+  padding: 30px;
   
   @media (max-width: 769px) {
     flex-direction: column;
@@ -50,5 +50,14 @@ export const MobileMenu = styled.div<MobileMenuProps>`
     background-color: #333;
     padding-top: 10px;
     width: 100%;
+  }
+`;
+
+export const DesktopMenu = styled.div`
+  display: none;
+  gap: 10px;
+
+  @media (min-width: 768px) {
+    display: flex;
   }
 `;
