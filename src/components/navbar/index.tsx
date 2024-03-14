@@ -24,14 +24,17 @@ const Navbar: React.FC = () => {
       <S.MenuIcon onClick={toggleMenu}>☰</S.MenuIcon>
       {isMobile === true ? (
         <S.MobileMenu open={isOpen}>
-          <S.NavLink>
+          <S.NavLink onClick={toggleMenu}>
             <Link to="/">Home</Link>
           </S.NavLink>
-          <S.NavLink>
+          <S.NavLink onClick={toggleMenu}>
             <Link to="/locations">Locations</Link>
           </S.NavLink>
-          <S.NavLink>
+          <S.NavLink onClick={toggleMenu}>
             <Link to="/about">About</Link>
+          </S.NavLink>
+          <S.NavLink >
+            <ChangeLanguage />
           </S.NavLink>
         </S.MobileMenu>
       ) : (
