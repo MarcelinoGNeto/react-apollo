@@ -16,13 +16,14 @@ export const Container = styled.div`
 
 export const H3 = styled.h3`
     font-size: 22px;
+    margin-bottom: 8px;
 `;
 
 export const ImgContainer = styled.div`
-    padding: 10px;
+    text-align: center;
 `;
 
 export const TextContainer = styled.div`
     background-color: azure;
-    padding: 10px;
+    
 `;

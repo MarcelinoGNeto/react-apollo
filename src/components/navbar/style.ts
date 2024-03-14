@@ -54,7 +54,8 @@ export const MobileMenu = styled.div<MobileMenuProps>`
 `;
 
 export const DesktopMenu = styled.div`
-  display: none;
+  display: flex;
+  align-items: center;
   gap: 10px;
 
   @media (min-width: 768px) {
