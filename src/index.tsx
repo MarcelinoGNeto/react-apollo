@@ -1,42 +1,23 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import "./global.css";
-import App from "./App";
-import {
-  ApolloClient,
-  ApolloProvider,
-  InMemoryCache,
-  gql,
-} from "@apollo/client";
-
-const client = new ApolloClient({
-  uri: "https://flyby-router-demo.herokuapp.com/",
-  cache: new InMemoryCache(),
-});
-
-client
-  .query({
-    query: gql`
-      query GetLocations {
-        locations {
-          id
-          name
-          description
-          photo
-        }
-      }
-    `,
-  })
-  .then((result) => console.log(result));
+import "./styles/global.css";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./services/apolloClient";
+import { BrowserRouter } from "react-router-dom";
+import MainRoutes from "./routes";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+import "./dictionary/i18nextConfig";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 root.render(
-  <React.StrictMode>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </React.StrictMode>
+  <ApolloProvider client={client}>
+    <BrowserRouter>
+      <Navbar />
+      <MainRoutes />
+      <Footer />
+    </BrowserRouter>
+  </ApolloProvider>
 );
