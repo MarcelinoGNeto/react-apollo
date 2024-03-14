@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
             <Link to="/locations">Locations</Link>
           </S.NavLink>
           <S.NavLink>
-            <Link to="/about">About</Link>
+            <Link to="/about">Sobre</Link>
           </S.NavLink>
         </S.MobileMenu>
       ) : (
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
             <Link to="/locations">Locations</Link>
           </S.NavLink>
           <S.NavLink>
-            <Link to="/about">About</Link>
+            <Link to="/about">Sobre</Link>
           </S.NavLink>
           <S.NavLink>
             <ChangeLanguage />
