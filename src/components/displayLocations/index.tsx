@@ -16,13 +16,16 @@ export const DisplayLocations = () => {
   if (error) return <p>Error : {error.message}</p>;
 
   return data.locations.map(({ id, name, description, photo }: Location) => (
-    <div key={id}>
-      <h3>{name}</h3>
+    <S.Container key={id}>
+      <S.H3>{name}</S.H3>
+      <S.ImgContainer>
+
       <img width="400" height="250" alt="location-reference" src={`${photo}`} />
-      <br />
+      </S.ImgContainer>
       <b>About this location:</b>
-      <p>{description}</p>
-      <br />
-    </div>
+      <S.TextContainer>
+        <p>{description}</p>
+      </S.TextContainer>
+    </S.Container>
   ));
 };

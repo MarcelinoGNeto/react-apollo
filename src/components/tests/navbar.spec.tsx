@@ -38,7 +38,7 @@ describe("Navbar component", () => {
   });
 
   test("renders home, locations, about, and change language links in desktop view", () => {
-    global.innerWidth = 1024; // set viewport width for desktop view
+    global.innerWidth = 1024;
 
     renderNavbar();
 
