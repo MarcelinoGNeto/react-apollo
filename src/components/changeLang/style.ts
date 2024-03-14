@@ -29,10 +29,11 @@ export const Ul = styled.ul`
 `;
 
 export const LiDropdown = styled.li`
-    text-align: left;
     color: #212121;
     padding: 1em 1em;
     display: flex;
+    justify-content: center;
+    gap: 10px;
     &:hover {
         background-color: #005999;
         color: #ffffff;

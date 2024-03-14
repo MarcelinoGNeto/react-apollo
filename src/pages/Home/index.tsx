@@ -12,10 +12,10 @@ function HomePage() {
         <S.H1>{t("home.header")}</S.H1>
       </S.Header>
       <S.ImgDesktop>
-        <img src={spaDesktop} alt="SPA" />
+        <img src={spaDesktop} alt="Single Page Application" />
       </S.ImgDesktop>
       <S.ImgMobile>
-        <img src={spaMobile} alt="SPA" />
+        <img src={spaMobile} alt="Single Page Application" />
       </S.ImgMobile>
       <S.Main>
         <S.Article>
