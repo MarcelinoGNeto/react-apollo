@@ -107,16 +107,7 @@ function AboutPage() {
           </S.XpContent>
           <S.XpContent>
             <S.Text>
-              <strong>Empresa</strong>: Trabalhar para a 2R.P.A foi o pontapé
-              inicial em minha carreira como desenvolvedor. Atuei como
-              freelancer, o que me qualificou para diversas oportunidades,
-              principalmente utilizando no back-end o Java e todo seu
-              ecossistema (Spring Boot, Maven, MVC, JPA, Hibernate) e no
-              Database tive experiências com SqlServer, Oracle, MySQL,
-              PostgreSQL e MongoDB. Também pude atuar em projetos front-end
-              utilizando HTML, CSS, Javascript/Typescript, Angular. Em ambos os
-              projetos, trabalhei com versionamento e Integração contínua (Git e
-              GitHub/GitLab) e com metodologias ágeis como o SCRUM.
+              <strong>Empresa</strong>: 2R.P.A
             </S.Text>
             <S.Text>
               <strong>Período</strong>: abr de 2020 - abr de 2021 · 1 ano 1 mês
